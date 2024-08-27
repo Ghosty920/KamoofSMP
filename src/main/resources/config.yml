@@ -1,0 +1,23 @@
+# Chacune des valeurs ci-dessous sont celles de base du KamoofSMP
+
+# Le nom des têtes
+head-name: "§e%player%"
+# La description des têtes
+head-lore:
+  - "§8Fais §lClick-Droit §8avec cette tête pour te déguiser en le joueur qu'elle représente"
+
+# Les messages utilisent MiniMessages: https://docs.advntr.dev/minimessage/format
+# Vous pouvez les prévisualiser avec le suite suivant: https://webui.advntr.dev/
+messages:
+  disguised: "<green>Tu es maintenant déguisé en <yellow>%player%"
+  undisguide-info: "<click:run_command:/undisguise><yellow><bold>[CLIQUE ICI]</bold></click> <aqua>Pour Retirer ton déguisement ou fais la commande /undisguise"
+  lostdisguide: "<red>Tu as perdu ton déguisement en mourrant (rip bozo)"
+  nodisguise: "<red>Tu n'as actuellement aucun déguisement" # Si qql a le vrai msg, merci de me contacter
+  undisguised: "<red>Tu n'as plus de déguisement"
+
+# Je verrais si j'ajoute ça plus tard haha
+# 1. Rename bug
+# 2. S'auto disguise
+# ptetre une option pour qu'ils ne soient pas stackable... idk
+# cordialement, moi :3
+options:
