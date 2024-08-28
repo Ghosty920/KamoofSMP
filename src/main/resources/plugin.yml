@@ -1,7 +1,9 @@
 name: KamoofSMP
-description: Le KamoofSMP refait de 0
 version: 1.0
-depend: [ NickAPI]
+description: Le KamoofSMP refait de 0
+author: Ghosty
+api-version: 1.13
+depend: [ NickAPI ]
 main: me.ghosty.kamoofsmp.KamoofSMP
 commands:
   givehead:
@@ -9,11 +11,5 @@ commands:
     permission: kamoofsmp.give
   undisguise:
     description: Retirer sa fausse identité
-    permission: kamoofsmp.undisguise
-permissions:
-  kamoofsmp.bypass:
-    description: Ne pas faire dropper sa tête à la mort
-    default: false
-  kamoofsmp.undisguise:
-    description: Retirer sa fausse identité
-    default: true
+#    permission: kamoofsmp.undisguise
+# TODO: Vrai système où "ouais y'a une perm pour dire que c'est activé totalement, ouais.."

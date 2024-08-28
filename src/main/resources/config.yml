@@ -10,10 +10,10 @@ head-lore:
 # Vous pouvez les prévisualiser avec le suite suivant: https://webui.advntr.dev/
 messages:
   disguised: "<green>Tu es maintenant déguisé en <yellow>%player%"
-  undisguide-info: "<click:run_command:/undisguise><yellow><bold>[CLIQUE ICI]</bold></click> <aqua>Pour Retirer ton déguisement ou fais la commande /undisguise"
-  lostdisguide: "<red>Tu as perdu ton déguisement en mourrant (rip bozo)"
+  undisguise-info: "<click:run_command:/undisguise><yellow><bold>[CLIQUE ICI]</bold></click> <aqua>Pour Retirer ton déguisement ou fais la commande /undisguise"
+  lostdisguise: "<red>Tu as perdu ton déguisement en mourrant (rip bozo)"
   nodisguise: "<red>Tu n'as actuellement aucun déguisement" # Si qql a le vrai msg, merci de me contacter
-  undisguised: "<red>Tu n'as plus de déguisement"
+  undisguised: "<green>Tu as bien retiré ton déguisement"
 
 # Je verrais si j'ajoute ça plus tard haha
 # 1. Rename bug

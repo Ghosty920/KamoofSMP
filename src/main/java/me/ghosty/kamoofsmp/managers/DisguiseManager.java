@@ -1,7 +1,6 @@
 package me.ghosty.kamoofsmp.managers;
 
 import lombok.experimental.UtilityClass;
-import me.ghosty.kamoofsmp.KamoofSMP;
 import org.bukkit.entity.Player;
 import xyz.haoshoku.nick.api.NickAPI;
 

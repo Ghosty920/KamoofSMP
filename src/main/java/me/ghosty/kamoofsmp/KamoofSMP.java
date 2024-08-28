@@ -3,7 +3,6 @@ package me.ghosty.kamoofsmp;
 import lombok.Getter;
 import me.ghosty.kamoofsmp.features.*;
 import me.ghosty.kamoofsmp.managers.MessageManager;
-import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;
@@ -11,15 +10,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.List;
-import java.util.Map;
-
 public final class KamoofSMP extends JavaPlugin {
 	
 	@Getter
 	private static KamoofSMP instance;
 	
-	private static boolean isSpigot = false, isAdventure = false;
+	/*private static boolean isSpigot = false, isAdventure = false, hasBungeeChat = false;
 	
 	static {
 		try {
@@ -32,26 +28,26 @@ public final class KamoofSMP extends JavaPlugin {
 			isAdventure = true;
 		} catch (Throwable ignored) {
 		}
-	}
+		try {
+			Class.forName("net.md_5.bungee.chat.ComponentSerializer");
+			hasBungeeChat = true;
+		} catch (Throwable ignored) {
+		}
+	}*/
 	
 	/*public static BaseComponent[] configComponent(String path) {
 		return MessageManager.toBaseComponent(instance.getConfig().getString(path));
 	}*/
 	
-	public static void sendMessage(Player player, String path, Map<String, Object> args) {
+	public static void sendMessage(Player player, String path, String playerName) {
 		String message = instance.getConfig().getString(path);
-		
-		List<String> keys = args.keySet().stream().toList();
-		List<Object> values = args.values().stream().toList();
-		for (int i = 0; i < args.size(); i++)
-			message = message.replace("%"+keys.get(i)+"%", values.get(i).toString());
-		
-		player.sendRawMessage(MessageManager.toJSON(MessageManager.deserialize(message)));
-	}
-	
-	public static void sendMessage(Player player, String path) {
-		String message = instance.getConfig().getString(path);
-		player.sendRawMessage(MessageManager.toJSON(MessageManager.deserialize(message)));
+		if (message == null)
+			return;
+		if (playerName != null)
+			message = message.replace("%player%", playerName);
+		player.spigot().sendMessage(MessageManager.toBaseComponent(message));
+//		ComponentSerializer.parse(jsonString);
+//		player.spigot().sendMessage(ComponentSerializer.parse(MessageManager.toJSON(MessageManager.deserialize(message))));
 	}
 	
 	@Override
@@ -69,7 +65,6 @@ public final class KamoofSMP extends JavaPlugin {
 		
 		setupCommand("givehead", new CommandGiveHead());
 		setupCommand("undisguise", new CommandUndisguise());
-		
 	}
 	
 	private void setupCommand(String name, Object command) {

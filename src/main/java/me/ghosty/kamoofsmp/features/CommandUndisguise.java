@@ -17,10 +17,11 @@ public final class CommandUndisguise implements CommandExecutor, TabCompleter {
 		}
 		
 		if (DisguiseManager.isDisguised(player)) {
+			String disguise = DisguiseManager.getDisguise(player);
 			DisguiseManager.undisguise(player);
-			KamoofSMP.sendMessage(player, "messages.undisguised");
+			KamoofSMP.sendMessage(player, "messages.undisguised", disguise);
 		} else {
-			KamoofSMP.sendMessage(player, "messages.nodisguise");
+			KamoofSMP.sendMessage(player, "messages.nodisguise", null);
 		}
 		
 		return true;

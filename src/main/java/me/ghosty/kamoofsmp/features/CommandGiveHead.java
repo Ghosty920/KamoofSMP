@@ -25,10 +25,10 @@ public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 		}
 		
 		ItemStack item = SkullManager.getSkull(args[0]);
-		if(player.getInventory().addItem(item).size() > 0)
+		if (player.getInventory().addItem(item).size() > 0)
 			player.sendMessage("§cYour inventory is full");
 		else
-			player.sendMessage("§aGave yourself the head of §e"+args[0]);
+			player.sendMessage("§aGave yourself the head of §e" + args[0]);
 		
 		return true;
 	}
