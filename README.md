@@ -5,11 +5,9 @@ Plugin non officiel recréé à partir des vidéos et lives du Kamoof SMP.
 Lorsqu'un joueur meurt, il fait tomber sa tête, qui, quand utilisée permet au joueur de voler son apparence et son nom
 temporairement.
 
-Note: SVP n'hésitez pas à mettre une `⭐ Star/Étoile` en haut de votre écran, ça aide à rendre le projet + visible sur
-google. Merci.
-
-Note bis: Par défaut, [le bug pour pouvoir rename les têtes](https://youtu.be/RBNFO50Zjmw?si=H_7Qagk8Ua1ZRSmr&t=672) est
-désactivé, et ne peut pas être réactivé depuis le fichier configuration. Merci.
+> [!NOTE]
+> SVP n'hésitez pas à mettre une `⭐ Star/Étoile` en haut de votre écran, ça aide à rendre le projet + visible sur
+> google. Merci.
 
 ## Comment l'utiliser?
 
@@ -20,12 +18,15 @@ désactivé, et ne peut pas être réactivé depuis le fichier configuration. Me
 4. Lancez votre serveur
 
 Si vous avez un problème, utiliser google pour apprendre à créer un serveur, je ne vous viendrai probablement PAS en
-aide.
+aide, sauf si vous venez demander gentillement sur mon discord `@ghosty920`, alors là on verra :3
+
+PS: Par défaut, [le bug pour pouvoir rename les têtes](https://youtu.be/RBNFO50Zjmw?si=H_7Qagk8Ua1ZRSmr&t=672) est
+désactivé, et ne peut pas être réactivé depuis le fichier configuration (pour l'instant). Merci.
 
 ## Versions supportées
 
-|                      Software                      |      État      | Versions |
-|:--------------------------------------------------:|:--------------:|:--------:|
-| [🔧 Spigot](https://getbukkit.org/download/spigot) | ✅ (depuis 1.0) | ? - 1.21 |
-|   [📜 Paper](https://papermc.io/downloads/paper)   |  ❔ Non testé   |    ?     |
+|                      Software                      |      État       | Versions |
+| :------------------------------------------------: | :-------------: | :------: |
+| [🔧 Spigot](https://getbukkit.org/download/spigot) |  ❔ Non testé   |    ?     |
+|   [📜 Paper](https://papermc.io/downloads/paper)   | ✅ (depuis 1.0) | ? - 1.21 |
 |         [🟪 Purpur](https://purpurmc.org/)         |  ❔ Non testé   |    ?     |
