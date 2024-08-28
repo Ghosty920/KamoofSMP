@@ -19,12 +19,12 @@ dependencies {
     /*shadowImpl("net.kyori:adventure-api:4.17.0")
     shadowImpl("net.kyori:adventure-text-minimessage:4.17.0")
     shadowImpl("net.kyori:adventure-text-serializer-legacy:4.17.0")
-    shadowImpl("net.kyori:adventure-platform-bungeecord:4.3.3")*/
+    shadowImpl("net.kyori:adventure-platform-bungeecord:4.3.4")*/
 
     implementation("net.kyori:adventure-api:4.17.0")
     implementation("net.kyori:adventure-text-minimessage:4.17.0")
     implementation("net.kyori:adventure-text-serializer-legacy:4.17.0")
-    implementation("net.kyori:adventure-platform-bungeecord:4.3.3")
+    implementation("net.kyori:adventure-platform-bungeecord:4.3.4")
 
     /*implementation("net.md-5:bungeecord-chat:1.20-R0.2") {
         isTransitive = false
