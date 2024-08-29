@@ -5,14 +5,14 @@ import me.ghosty.kamoofsmp.managers.DisguiseManager;
 import me.ghosty.kamoofsmp.managers.SkullManager;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
+import org.bukkit.event.*;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public final class EventsListener implements Listener {
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onInteract(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
 		OfflinePlayer target = SkullManager.getHolder(event.getItem());
@@ -40,7 +40,7 @@ public final class EventsListener implements Listener {
 		event.getItem().setAmount(event.getItem().getAmount() - 1);
 	}
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onDeath(PlayerDeathEvent event) {
 		Player player = event.getEntity();
 		if (DisguiseManager.isDisguised(player)) {

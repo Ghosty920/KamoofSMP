@@ -39,11 +39,16 @@ public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 			return List.of();
 		
 		ArrayList<String> values = new ArrayList<>();
-		for (OfflinePlayer player : Bukkit.getOfflinePlayers())
+		for (OfflinePlayer player : Bukkit.getOfflinePlayers()) {
+			if(player == null || player.getName() == null)
+				continue;
 			values.add(player.getName());
+		}
 		
-		if (args.length > 0)
-			values.removeIf(player -> !player.toLowerCase().contains(args[0].toLowerCase()));
+		if (args.length == 1) {
+			String toCheck = args[0].toLowerCase().trim();
+			values.removeIf(player -> !player.toLowerCase().trim().contains(toCheck));
+		}
 		
 		return values;
 	}
