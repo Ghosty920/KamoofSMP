@@ -1,4 +1,16 @@
 # Kamoof SMP
+<div align="center">
+
+[![Paper](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/paper_vector.svg)](https://papermc.io)
+[![Spigot](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/spigot_vector.svg)](https://spigotmc.org)
+[![Purpur](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/purpur_vector.svg)](https://purpurmc.org)
+
+[![Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/plugin/kamoofsmp)
+
+**Mod uniquement téléchargeable sur Modrinth: https://modrinth.com/plugin/kamoofsmp**
+
+</div>
+<br>
 
 Plugin non officiel recréé à partir des vidéos et lives du Kamoof SMP.
 
