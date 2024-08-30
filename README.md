@@ -39,6 +39,6 @@ désactivé, et ne peut pas être réactivé depuis le fichier configuration (po
 
 |                      Software                      |      État       | Versions |
 | :------------------------------------------------: | :-------------: | :------: |
-| [🔧 Spigot](https://getbukkit.org/download/spigot) |  ❔ Non testé   |    ?     |
-|   [📜 Paper](https://papermc.io/downloads/paper)   | ✅ (depuis 1.0) | ? - 1.21 |
-|         [🟪 Purpur](https://purpurmc.org/)         |  ❔ Non testé   |    ?     |
+| [🔧 Spigot](https://getbukkit.org/download/spigot) |  ✅ (depuis 1.0)   |    1.20-1.21 (depuis 1.1)     |
+|   [📜 Paper](https://papermc.io/downloads/paper)   | ✅ (depuis 1.0) | 1.20 - 1.21 (depuis 1.1) |
+|         [🟪 Purpur](https://purpurmc.org/)         |  ✅ (depuis 1.0)   |    1.20 - 1.21 (depuis 1.1)    |
