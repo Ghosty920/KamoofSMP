@@ -1,6 +1,7 @@
 package me.ghosty.kamoofsmp.managers;
 
 import lombok.experimental.UtilityClass;
+import me.ghosty.kamoofsmp.KamoofSMP;
 import org.bukkit.entity.Player;
 import xyz.haoshoku.nick.api.NickAPI;
 
@@ -12,13 +13,18 @@ public final class DisguiseManager {
 	private static final HashMap<Player, String> displayNames = new HashMap<>();
 	
 	public static void disguise(Player player, String name) {
-		displayNames.put(player, player.getDisplayName());
-		player.setDisplayName(player.getDisplayName().replace(player.getName(), name));
+		String displayName = player.getDisplayName();
+		if(displayNames.containsKey(player))
+			displayName = displayNames.get(player);
+		else
+			displayNames.put(player, player.getDisplayName());
+		player.setDisplayName(displayName.replace(player.getName(), name));
 		
 		NickAPI.nick(player, name);
 		NickAPI.setSkin(player, name);
 		NickAPI.setUniqueId(player, name);
-		NickAPI.setGameProfileName(player, name);
+		if(KamoofSMP.getInstance().getConfig().getBoolean("options.gameprofile"))
+			NickAPI.setGameProfileName(player, name);
 		NickAPI.refreshPlayer(player);
 	}
 	
@@ -29,7 +35,8 @@ public final class DisguiseManager {
 		NickAPI.resetNick(player);
 		NickAPI.resetSkin(player);
 		NickAPI.resetUniqueId(player);
-		NickAPI.resetGameProfileName(player);
+		if(KamoofSMP.getInstance().getConfig().getBoolean("options.gameprofile"))
+			NickAPI.resetGameProfileName(player);
 		NickAPI.refreshPlayer(player);
 	}
 	

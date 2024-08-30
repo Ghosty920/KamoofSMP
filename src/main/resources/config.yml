@@ -15,9 +15,13 @@ messages:
   nodisguise: "<red>Tu n'as actuellement aucun déguisement" # Si qql a le vrai msg, merci de me contacter
   undisguised: "<green>Tu as bien retiré ton déguisement"
 
-# Je verrais si j'ajoute ça plus tard haha
-# 1. Rename bug
-# 2. Stack les items
-# ptetre une option pour qu'ils ne soient pas stackable... idk
-# cordialement, moi :3
 options:
+  # Si défini sur true, les têtes seront stackable, sur false, le cas contraire
+  # Ceci n'affectera pas les têtes déjà créées
+  stackable: false
+
+  # Si défini sur true, le joueur se verra attribué le nom Game Profile également, contrairement à si défini sur false
+  # Ceci permettra d'avoir également le pseudo volé lors de l'utilisation de commandes (tab complete, les commandes ne fonctionnent qu'avec le pseudo original)
+  # Attention: ceci provoque un bug où, si quelqu'un utilise la tête d'un joueur qui en a volé un autre, se verra attribué la fausse identité de ce même joueur également
+  # Il est recommandé de laisser sur false
+  gameprofile: false

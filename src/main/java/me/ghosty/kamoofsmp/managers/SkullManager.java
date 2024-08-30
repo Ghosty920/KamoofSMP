@@ -7,6 +7,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.persistence.PersistentDataType;
 
+import java.util.regex.Pattern;
+
 @UtilityClass
 public final class SkullManager {
 	
@@ -19,14 +21,16 @@ public final class SkullManager {
 		meta.setOwningPlayer(Bukkit.getOfflinePlayer(player));
 		meta.setItemName(KamoofSMP.getInstance().getConfig().getString("head-name").replace("%player%", player));
 		meta.setLore(KamoofSMP.getInstance().getConfig().getStringList("head-lore"));
-		// faire que l'item ne soit pas stackable
-		meta.getPersistentDataContainer().set(keyTimestamp, PersistentDataType.LONG, System.currentTimeMillis());
+		
+		boolean stackable = KamoofSMP.getInstance().getConfig().getBoolean("options.stackable");
+		meta.getPersistentDataContainer().set(keyTimestamp, PersistentDataType.LONG, stackable ? -1L : System.currentTimeMillis());
 		meta.getPersistentDataContainer().set(keyPlayer, PersistentDataType.STRING, player);
+		
 		item.setItemMeta(meta);
 		return item;
 	}
 	
-	public static OfflinePlayer getHolder(ItemStack item) {
+	public static OfflinePlayer getOwner(ItemStack item) {
 		if (item == null || !item.hasItemMeta())
 			return null;
 		if (!(item.getItemMeta() instanceof SkullMeta meta))

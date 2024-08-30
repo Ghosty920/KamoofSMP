@@ -9,8 +9,11 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public final class CommandGiveHead implements CommandExecutor, TabCompleter {
+	
+	private static Pattern usernamePattern = Pattern.compile("^[a-zA-Z0-9_]{1,16}$");
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -21,6 +24,11 @@ public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 		
 		if (args.length == 0) {
 			player.sendMessage(String.format("§cUsage: /%s <playerName>", label.toLowerCase()));
+			return true;
+		}
+		
+		if(!usernamePattern.matcher(args[0]).matches()) {
+			player.sendMessage(String.format("§cInvalid username '%s'!", args[0]));
 			return true;
 		}
 		

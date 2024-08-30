@@ -60,6 +60,8 @@ public final class KamoofSMP extends JavaPlugin {
 	public void onEnable() {
 		super.onEnable();
 		
+		saveDefaultConfig();
+		
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new EventsListener(), this);
 		

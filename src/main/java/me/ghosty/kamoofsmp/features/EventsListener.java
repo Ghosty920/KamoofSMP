@@ -7,7 +7,6 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.*;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public final class EventsListener implements Listener {
@@ -15,7 +14,7 @@ public final class EventsListener implements Listener {
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onInteract(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
-		OfflinePlayer target = SkullManager.getHolder(event.getItem());
+		OfflinePlayer target = SkullManager.getOwner(event.getItem());
 		if (target == null)
 			return;
 		
@@ -36,7 +35,7 @@ public final class EventsListener implements Listener {
 		DisguiseManager.disguise(player, name);
 		KamoofSMP.sendMessage(player, "messages.disguised", name);
 		KamoofSMP.sendMessage(player, "messages.undisguise-info", name);
-		// au cas où l'item soit quand même stacké, on n'en retire qu'un
+		
 		event.getItem().setAmount(event.getItem().getAmount() - 1);
 	}
 	

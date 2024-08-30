@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "me.ghosty"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -49,6 +49,14 @@ tasks {
 
     assemble {
         dependsOn(shadowJar)
+    }
+
+    processResources {
+        inputs.property("version", version)
+
+        filesMatching(listOf("plugin.yml")) {
+            expand(inputs.properties)
+        }
     }
 
     /*shadowJar {
