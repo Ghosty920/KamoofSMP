@@ -19,7 +19,11 @@ public final class SkullManager {
 		ItemStack item = new ItemStack(Material.PLAYER_HEAD);
 		SkullMeta meta = (SkullMeta) item.getItemMeta();
 		meta.setOwningPlayer(Bukkit.getOfflinePlayer(player));
-		meta.setItemName(KamoofSMP.getInstance().getConfig().getString("head-name").replace("%player%", player));
+		try {
+			meta.setItemName(KamoofSMP.getInstance().getConfig().getString("head-name").replace("%player%", player));
+		} catch(Throwable exc) {
+			meta.setDisplayName(KamoofSMP.getInstance().getConfig().getString("head-name").replace("%player%", player));
+		}
 		meta.setLore(KamoofSMP.getInstance().getConfig().getStringList("head-lore"));
 		
 		boolean stackable = KamoofSMP.getInstance().getConfig().getBoolean("options.stackable");
@@ -35,7 +39,7 @@ public final class SkullManager {
 			return null;
 		if (!(item.getItemMeta() instanceof SkullMeta meta))
 			return null;
-		if (!meta.getPersistentDataContainer().has(keyTimestamp))
+		if (!meta.getPersistentDataContainer().has(keyTimestamp, PersistentDataType.LONG))
 			return null;
 		return meta.getOwningPlayer();
 	}
