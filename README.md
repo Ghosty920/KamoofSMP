@@ -25,7 +25,7 @@ temporairement.
 
 1. Ayez un serveur bukkit (n'hésitez pas à suivre un tuto si vous êtes déjà perdus)
 2. Créez un dossier plugins là où se trouve votre fichier serveur, s'il n'existe pas déjà
-3. Placez-y le fichier `.jar` trouvable [ici](https://github.com/Ghosty920/KamoofSMP/releases/latest) et le
+3. Placez-y le fichier `.jar` trouvable [ici](https://modrinth.com/plugin/kamoofsmp/versions) et le
    plugin [NickAPI](https://www.spigotmc.org/resources/nickapi-1-8-1-20-4.26013/)
 4. Lancez votre serveur
 
