@@ -1,4 +1,5 @@
 # Kamoof SMP
+
 <div align="center">
 
 [![Paper](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/paper_vector.svg)](https://papermc.io)
@@ -19,8 +20,10 @@ Lorsqu'un joueur meurt, il fait tomber sa tête, qui, quand utilisée permet au 
 temporairement.
 
 > [!NOTE]
-> SVP n'hésitez pas à mettre une `⭐ Star/Étoile` en haut de votre écran, ça aide à rendre le projet + visible sur
-> google. Merci.
+> SVP n'hésitez pas à mettre une `⭐ Star` en haut de votre écran, et à le mettre en `❤️ Favori` sur Modrinth, ça aide à rendre le projet + visible sur google, merci à vous!
+
+> [!CAUTION]
+> **ATTENTION ! N'utilisez PAS le plugin distribué par Sohran aux 10k membres!! Il comporte 2 bugs majeures qui peuvent casser le concept entier du plugin!! Faites gaffe !**
 
 ## Comment l'utiliser?
 
