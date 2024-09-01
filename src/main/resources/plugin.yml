@@ -2,7 +2,7 @@ name: KamoofSMP
 version: ${version}
 description: Le KamoofSMP refait de 0
 author: Ghosty
-api-version: 1.13
+api-version: 1.20
 depend: [ NickAPI ]
 main: me.ghosty.kamoofsmp.KamoofSMP
 commands:

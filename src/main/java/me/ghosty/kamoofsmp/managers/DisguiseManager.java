@@ -10,15 +10,8 @@ import java.util.HashMap;
 @UtilityClass
 public final class DisguiseManager {
 	
-	private static final HashMap<Player, String> displayNames = new HashMap<>();
-	
 	public static void disguise(Player player, String name) {
-		String displayName = player.getDisplayName();
-		if (displayNames.containsKey(player))
-			displayName = displayNames.get(player);
-		else
-			displayNames.put(player, player.getDisplayName());
-		player.setDisplayName(displayName.replace(player.getName(), name));
+		player.setDisplayName(player.getDisplayName().replace(player.getName(), name));
 		
 		NickAPI.nick(player, name);
 		NickAPI.setSkin(player, name);
@@ -29,8 +22,7 @@ public final class DisguiseManager {
 	}
 	
 	public static void undisguise(Player player) {
-		player.setDisplayName(displayNames.get(player));
-		displayNames.remove(player);
+		player.setDisplayName(player.getDisplayName().replace(getDisguise(player), NickAPI.getOriginalName(player)));
 		
 		NickAPI.resetNick(player);
 		NickAPI.resetSkin(player);
