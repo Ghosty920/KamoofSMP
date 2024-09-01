@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.*;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import xyz.haoshoku.nick.api.NickAPI;
 
 public final class EventsListener implements Listener {
 	
@@ -29,6 +30,8 @@ public final class EventsListener implements Listener {
 		}
 		
 		String name = target.getName();
+		if (target instanceof Player targetP)
+			name = NickAPI.getOriginalName(targetP);
 		if (name == null)
 			name = SkullManager.getName(event.getItem());
 		
@@ -46,6 +49,9 @@ public final class EventsListener implements Listener {
 			String disguise = DisguiseManager.getDisguise(player);
 			DisguiseManager.undisguise(player);
 			KamoofSMP.sendMessage(player, "messages.lostdisguise", disguise);
+			
+			// compabilité déco combat
+			DisguiseRestaurer.set(player.getName(), null);
 		}
 		
 		event.getDrops().add(SkullManager.getSkull(player.getName()));

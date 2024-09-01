@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 	
-	private static Pattern usernamePattern = Pattern.compile("^[a-zA-Z0-9_]{1,16}$");
+	private static final Pattern usernamePattern = Pattern.compile("^[a-zA-Z0-9_]{1,16}$");
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -27,7 +27,7 @@ public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 			return true;
 		}
 		
-		if(!usernamePattern.matcher(args[0]).matches()) {
+		if (!usernamePattern.matcher(args[0]).matches()) {
 			player.sendMessage(String.format("§cInvalid username '%s'!", args[0]));
 			return true;
 		}
@@ -48,7 +48,7 @@ public final class CommandGiveHead implements CommandExecutor, TabCompleter {
 		
 		ArrayList<String> values = new ArrayList<>();
 		for (OfflinePlayer player : Bukkit.getOfflinePlayers()) {
-			if(player == null || player.getName() == null)
+			if (player == null || player.getName() == null)
 				continue;
 			values.add(player.getName());
 		}

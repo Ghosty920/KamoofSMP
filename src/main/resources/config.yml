@@ -10,9 +10,9 @@ head-lore:
 # Vous pouvez les prévisualiser avec le suite suivant: https://webui.advntr.dev/
 messages:
   disguised: "<green>Tu es maintenant déguisé en <yellow>%player%"
-  undisguise-info: "<click:run_command:/undisguise><yellow><bold>[CLIQUE ICI]</bold></click> <aqua>Pour Retirer ton déguisement ou fais la commande /undisguise"
+  undisguise-info: "<click:run_command:/undisguise><yellow><bold>[CLIQUE ICI]</bold> <aqua>Pour Retirer ton déguisement ou fais la commande /undisguise</click>"
   lostdisguise: "<red>Tu as perdu ton déguisement en mourrant (rip bozo)"
-  nodisguise: "<red>Tu n'as actuellement aucun déguisement" # Si qql a le vrai msg, merci de me contacter
+  nodisguise: "<red>Tu n'as pas de déguisement"
   undisguised: "<green>Tu as bien retiré ton déguisement"
 
 options:
@@ -22,6 +22,15 @@ options:
 
   # Si défini sur true, le joueur se verra attribué le nom Game Profile également, contrairement à si défini sur false
   # Ceci permettra d'avoir également le pseudo volé lors de l'utilisation de commandes (tab complete, les commandes ne fonctionnent qu'avec le pseudo original)
-  # Attention: ceci provoque un bug où, si quelqu'un utilise la tête d'un joueur qui en a volé un autre, se verra attribué la fausse identité de ce même joueur également
-  # Il est recommandé de laisser sur false
-  gameprofile: false
+  # Exemple: /msg vous proposera le pseudo nick, mais l'utiliser ne fonctionnera pas
+  gameprofile: true
+
+  restaure:
+    # Si défini sur true, le déguisement est gardé à la reconnection, sur false, le cas contraire
+    # Cette information est sauvegardée également quand le serveur redémarre ou est reload
+    enabled: true
+    # Si définis sur true, le joueur recevra les messages comme s'il venait de se déguiser, sur false, le contraire
+    # Regardez la section "messages" au dessus pour + voir ces messages
+    messages:
+      disguised: false
+      undisguise-info: false

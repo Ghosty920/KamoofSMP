@@ -14,7 +14,7 @@ public final class DisguiseManager {
 	
 	public static void disguise(Player player, String name) {
 		String displayName = player.getDisplayName();
-		if(displayNames.containsKey(player))
+		if (displayNames.containsKey(player))
 			displayName = displayNames.get(player);
 		else
 			displayNames.put(player, player.getDisplayName());
@@ -23,7 +23,7 @@ public final class DisguiseManager {
 		NickAPI.nick(player, name);
 		NickAPI.setSkin(player, name);
 		NickAPI.setUniqueId(player, name);
-		if(KamoofSMP.getInstance().getConfig().getBoolean("options.gameprofile"))
+		if (KamoofSMP.config().getBoolean("options.gameprofile"))
 			NickAPI.setGameProfileName(player, name);
 		NickAPI.refreshPlayer(player);
 	}
@@ -35,7 +35,7 @@ public final class DisguiseManager {
 		NickAPI.resetNick(player);
 		NickAPI.resetSkin(player);
 		NickAPI.resetUniqueId(player);
-		if(KamoofSMP.getInstance().getConfig().getBoolean("options.gameprofile"))
+		if (KamoofSMP.config().getBoolean("options.gameprofile"))
 			NickAPI.resetGameProfileName(player);
 		NickAPI.refreshPlayer(player);
 	}
