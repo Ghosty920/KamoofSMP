@@ -6,6 +6,7 @@
 [![Purpur](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/purpur_vector.svg)](https://purpurmc.org)
 
 [![Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/plugin/kamoofsmp)
+[![Discord](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/social/discord-plural_vector.svg)](https://discord.gg/akgp49Q76M)
 
 **Mod uniquement téléchargeable sur Modrinth: https://modrinth.com/plugin/kamoofsmp**
 
@@ -30,7 +31,7 @@ temporairement.
 4. Lancez votre serveur
 
 Si vous avez un problème, utiliser google pour apprendre à créer un serveur, je ne vous viendrai probablement PAS en
-aide, sauf si vous venez demander gentillement sur mon discord `@ghosty920`, alors là on verra :3
+aide, sauf si vous venez demander gentillement sur mon discord `@ghosty920`, ou à rejoindre mon discord, alors là on verra :3
 
 PS: Par défaut, [le bug pour pouvoir rename les têtes](https://youtu.be/RBNFO50Zjmw?si=H_7Qagk8Ua1ZRSmr&t=672) est
 désactivé, et ne peut pas être réactivé depuis le fichier configuration (pour l'instant). Merci.
@@ -42,3 +43,4 @@ désactivé, et ne peut pas être réactivé depuis le fichier configuration (po
 | [🔧 Spigot](https://getbukkit.org/download/spigot) |  ✅ (depuis 1.0)   |    1.20-1.21 (depuis 1.1)     |
 |   [📜 Paper](https://papermc.io/downloads/paper)   | ✅ (depuis 1.0) | 1.20 - 1.21 (depuis 1.1) |
 |         [🟪 Purpur](https://purpurmc.org/)         |  ✅ (depuis 1.0)   |    1.20 - 1.21 (depuis 1.1)    |
+|         [🍃 Folia](https://papermc.io/software/folia)         |  ❔ (devrait marcher)  |    ❔    |
