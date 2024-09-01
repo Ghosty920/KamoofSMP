@@ -51,7 +51,6 @@ public final class DisguiseRestaurer implements Listener {
 	
 	@EventHandler
 	public void onJoin(PlayerJoinEvent event) {
-		System.out.println(event.getPlayer().getName());
 		if (!KamoofSMP.config().getBoolean("options.restaure.enabled"))
 			return;
 		
@@ -80,7 +79,6 @@ public final class DisguiseRestaurer implements Listener {
 	
 	@EventHandler
 	public void onQuit(PlayerQuitEvent event) {
-		System.out.println(event.getPlayer().getName());
 		if (!KamoofSMP.config().getBoolean("options.restaure.enabled"))
 			return;
 		
