@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public final class KamoofSMP extends JavaPlugin {
 	
 	@Getter
@@ -46,7 +48,7 @@ public final class KamoofSMP extends JavaPlugin {
 		saveDefaultConfig();
 		
 		PluginManager pm = Bukkit.getPluginManager();
-		pm.registerEvents(restaurer = new DisguiseRestaurer(getDataFolder() + "\\restaurer.yml"), this);
+		pm.registerEvents(restaurer = new DisguiseRestaurer(getDataFolder() + File.separator + "restaurer.yml"), this);
 		restaurer.onEnable();
 		
 		pm.registerEvents(new EventsListener(), this);
