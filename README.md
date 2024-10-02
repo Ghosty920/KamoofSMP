@@ -1,5 +1,7 @@
 # Kamoof SMP
 
+## [Ce projet a été abandonné au profit de Camouf 2, reprenant tous les concepts de la Saison 2, tout en gardant ceux de la Saison 1. Merci à vous 💖](https://modrinth.com/plugin/camouf2/) - [Lien GitHub](https://github.com/ghosty920/kamoofSMP-s2)
+
 <div align="center">
 
 [![Paper](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/paper_vector.svg)](https://papermc.io)
@@ -9,7 +11,7 @@
 [![Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/plugin/kamoofsmp)
 [![Discord](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/social/discord-plural_vector.svg)](https://discord.gg/akgp49Q76M)
 
-**Mod uniquement téléchargeable sur Modrinth: https://modrinth.com/plugin/kamoofsmp**
+**Mod uniquement téléchargeable sur Modrinth: https://modrinth.com/plugin/camouf**
 
 </div>
 <br>
