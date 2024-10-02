@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
     compileOnly("xyz/haoshoku/nick:NickAPI:v6.7")
 
     /*shadowImpl("net.kyori:adventure-api:4.17.0")
